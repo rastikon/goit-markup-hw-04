@@ -1,3 +1,4 @@
+
 :root {
     --primary-bg-color:#2F303A;
     --primary-text-color:#212121;
@@ -10,6 +11,8 @@
     --bg-color-button: #F5F4FA;
     --border-bottom: #ECECEC;
     --border-card:#EEEEEE;
+    --border:#AFB1B8;
+    --color-social-network-bg:rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -123,7 +126,8 @@ img {
     margin-left: 50px;
 }
 
-.cont-nav .cont {
+.cont {
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -131,13 +135,39 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+    align-items: center;
 }
 
+/*  */
 
 .cont-nav .cont:hover,
 .cont-nav .cont:focus {
     color: var(--accent-color);
+} 
+.cont:hover .icon-mail,
+.cont:focus .icon-mail,
+.cont:hover .icon-phone,
+.cont:focus .icon-phone{
+        fill:var(--accent-color);
 }
+
+
+.icon-mail{
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: var(--title-text-color);
+}
+
+
+.icon-phone{
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill:var(--title-text-color);
+}
+
+
 
 /* Лінія під хедером */
 .brd {
@@ -150,7 +180,7 @@ img {
     padding-bottom: 200px;
     
     text-align: center;
-    background-color: var(--primary-bg-color);
+    background-color: var(--primary-bg-color); 
 }
 
 .section-main .title {
@@ -163,6 +193,7 @@ img {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--spec-color);
+    
 }
 
 .button {
@@ -192,6 +223,19 @@ img {
     border: 0;
 }
 
+/* Фон */
+.overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/Fon.jpg);
+}
+
 /* Section  */
 /* Ховає заголовок h2 "Наши особенности" */
 .visually-hidden {
@@ -217,7 +261,10 @@ img {
     color: var(--primary-text-color);
 }
 
-/* Specifics */
+/*  ================
+    Чим ми займаємся
+    ================ */
+
 .specifics {
     display: flex;
     justify-content: space-between;
@@ -246,7 +293,19 @@ img {
     color: var(--title-text-color);
 }
 
-/* Чим ми займаємся */
+.item-feature {
+    width: 270px; 
+    height: 120px; 
+    margin-bottom: 30px;
+    padding: 25px 102px;
+    background-color: var(--bg-color-button);
+    border-radius: 4px;
+}
+.icon-feature {
+    width: 70px;
+    height: 70px;
+}
+
 .doing {
     display: flex;
     flex-wrap: wrap;
@@ -256,11 +315,11 @@ img {
     margin-right: 30px;
 }
 
-/* .list > .item:not(:last-child) {
-    margin-right: 30px;
-} */
 
-/* team */
+/* =============
+    Наша команда
+    ============ */
+
 .team {
     display: flex;
     flex-wrap: wrap;
@@ -313,7 +372,83 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
+
+
+/* ===============
+    Соцмережі команди 
+   ===============*/
+   .social-network {
+       display: flex;
+       margin-top: 16px;
+       margin-left: 32px;
+       margin-right: 32px;
+       justify-content: space-between;
+     }
+
+
+   .social-network .link-team {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+   }
+
+.link-team:hover,
+.link-team:focus{
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.link-team:hover .item-socteam,
+.link-team:focus .item-socteam {
+    fill: var(--spec-color);
+}
+
+
+.item-socteam {
+    width: 20px;
+    height: 20px;
+    fill: var(--border);
+}
+
+
+/* =================
+    Постійні клієнти
+   ================= */
+.clients{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-client {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+/* fill="#afb1b8" style="fill:var(--color3, #afb1b8)" */
+
+.itemclients{
+    width: 106px;
+    height: 60px;
+}
+
+.link-client{
+    fill:var(--border);
+}
+
+.link-client:hover,
+.link-client:focus{
+    fill:var(--accent-color);
+}
+
+/*  ================
+     Footer 
+     ===============*/
 .logo .footer {
     color: var(--spec-color);
 }
@@ -360,6 +495,54 @@ img {
     margin-bottom: 9px;
 }
 
+.footermain .container {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+}
+
+.connect {
+    margin-left: 70px;
+}
+.connect .title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    color: var(--spec-color);
+    text-transform: uppercase;
+}
+
+.soc-net {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.link-snfoot {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-social-network-bg);
+}
+
+.item-soc-foot {
+    width: 20px;
+    height: 20px;
+    fill: var(--spec-color);
+}
+
+.link-snfoot:hover,
+.link-snfoot:focus{
+    background-color: var(--accent-color);
+}
+
+.soc-net .item-social:not(:last-child) {
+    margin-right: 10px;
+}
 
 
 /* ---------------------------------- */
@@ -396,6 +579,9 @@ img {
 .filter .button:focus {
     color: var(--spec-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                0px 1px 2px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -412,6 +598,7 @@ img {
     margin-bottom: 30px;
 }
 
+
 .project-item:nth-child(3n) {
     margin-right: 0;
 }
@@ -426,7 +613,21 @@ img {
     border-right: 1px solid var(--border-card);
     border-left: 1px solid var(--border-card);
     border-bottom: 1px solid var(--border-card);
+    border: 1px solid var(--border-card);
 }
+
+.link-li {
+    display: inline-block;
+}
+
+.link-li:hover,
+.link-li:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+
+ }
+
 
 .list .titles {
     margin-bottom: 4px;
@@ -442,4 +643,7 @@ img {
     line-height: 1.9;
     color: var(--title-text-color);
 }
+
+
+
 
