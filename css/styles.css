@@ -54,7 +54,7 @@ img {
     padding-bottom: 0;
 }
 
-/* Прибирає паддінги */
+
 
 
 /* Прибирає стилі */
@@ -86,10 +86,7 @@ img {
 .site-nav {
     display: flex;
 }
-/* .site-nav .item{
-    outline: 1px solid red;
-    background-color: tomato;
-} */
+
 
 .site-nav .item:not(:last-child) {
     margin-right: 50px;
@@ -127,7 +124,7 @@ img {
 }
 
 .cont {
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -145,18 +142,29 @@ img {
     color: var(--accent-color);
 } 
 .cont:hover .icon-mail,
-.cont:focus .icon-mail,
+.cont:focus .icon-mail, 
 .cont:hover .icon-phone,
 .cont:focus .icon-phone{
         fill:var(--accent-color);
 }
 
+/* Ще один варіант ховера 
+   іконки разом із посиланням
+   Додати змінну fill="var(--icon-color, #000)" в svg
+     .icon-mail{
+        width: 16px;
+            height: 12px;
+            margin-right: 10px;
+            --icon-color: currentColor;
+     }
+
+   */
 
 .icon-mail{
     width: 16px;
     height: 12px;
     margin-right: 10px;
-    fill: var(--title-text-color);
+    fill: var(--title-text-color); 
 }
 
 
@@ -294,10 +302,12 @@ img {
 }
 
 .item-feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 270px; 
     height: 120px; 
     margin-bottom: 30px;
-    padding: 25px 102px;
     background-color: var(--bg-color-button);
     border-radius: 4px;
 }
@@ -380,9 +390,7 @@ img {
    .social-network {
        display: flex;
        margin-top: 16px;
-       margin-left: 32px;
-       margin-right: 32px;
-       justify-content: space-between;
+       justify-content: center;
      }
 
 
@@ -410,6 +418,10 @@ img {
     width: 20px;
     height: 20px;
     fill: var(--border);
+}
+
+.team-socnet:not(:last-child) {
+    margin-right: 10px;
 }
 
 
@@ -444,6 +456,7 @@ img {
 .link-client:hover,
 .link-client:focus{
     fill:var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 /*  ================
@@ -497,7 +510,6 @@ img {
 
 .footermain .container {
     display: flex;
-    justify-content: start;
     align-items: baseline;
 }
 
@@ -505,7 +517,7 @@ img {
     margin-left: 70px;
 }
 .connect .title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.17;
@@ -515,7 +527,6 @@ img {
 
 .soc-net {
     display: flex;
-    margin-top: 20px;
     justify-content: space-between;
 }
 
